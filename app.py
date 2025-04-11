@@ -10,7 +10,8 @@ from sklearn.model_selection import train_test_split
 from mlflow.models import infer_signature
 config = ConfigBox(YAML(typ="safe").load(Path("params.yaml").open(encoding="utf-8")))
 print(config)
- 
+
+mlflow.set_tracking_uri("/Users/lucasvanwyk/Documents/dvc_backup/mlruns")
 mlflow.set_experiment('mlflow_dvc_integration')
 def evaluate(model: RandomForestClassifier, X, y, split: str):
     y_pred = model.predict(X)

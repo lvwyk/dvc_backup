@@ -1,4 +1,4 @@
 model:
   n_estimators: 10
-  max_depth: 2
+  max_depth: 1
   random_state: 42
